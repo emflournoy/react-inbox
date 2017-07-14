@@ -7,7 +7,7 @@ const knex = require('../../knex');
 
 router.get('/', (req,res,next)=>{
   knex('messages')
-  .select('id','name','message')
+  .select('*')
   .then((data)=>{
     return res.send(data);
   })
